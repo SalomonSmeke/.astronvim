@@ -7,18 +7,11 @@ return {
     "mcchrish/zenbones.nvim",
     dependencies = "rktjmp/lush.nvim",
   },
+  -- Causes visual flash at start.
   {
     -- Apply the theme!
     "f-person/auto-dark-mode.nvim",
-    config = function()
-      local auto_dark_mode = require "auto-dark-mode"
-      auto_dark_mode.setup {
-        update_interval = 1000,
-        set_light_mode = function() vim.opt.background = "light" end,
-        set_dark_mode = function() vim.opt.background = "dark" end,
-      }
-      auto_dark_mode.init()
-    end,
+    opts = { update_interval = 1000 },
   },
   {
     -- Better function completion
@@ -26,8 +19,8 @@ return {
     event = "BufRead",
     config = function() require("lsp_signature").setup() end,
   },
-  -- Float some info about code-fold.
   {
+    -- Float some info about code-fold.
     "nvim-treesitter/nvim-treesitter-context",
     ft = { "python" },
   },
@@ -91,13 +84,7 @@ return {
   {
     "rcarriga/nvim-notify",
     event = "BufRead",
-    config = function()
-      require("notify").setup {
-        render = "compact",
-        animation = "fade",
-      }
-      vim.notify = require "notify"
-    end,
+    opts = { render = "compact", animation = "fade" },
   },
 
   -- == Disables ==

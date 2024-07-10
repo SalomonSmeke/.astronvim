@@ -8,4 +8,3 @@ vim.filetype.add {
     ["zsh"] = "bash",
   },
 }
-

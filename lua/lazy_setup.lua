@@ -30,6 +30,6 @@ require("lazy").setup({
       },
     },
   },
-  -- automatically check for updates
-  checker = { enabled = true },
+  -- automatically check for updates, lots of lag
+  -- checker = { enabled = true },
 } --[[@as LazyConfig]])
