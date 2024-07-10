@@ -1,5 +1,3 @@
-if true then return {} end -- WARN: REMOVE THIS LINE TO ACTIVATE THIS FILE
-
 -- Customize Treesitter
 
 ---@type LazySpec
@@ -8,8 +6,28 @@ return {
   opts = {
     ensure_installed = {
       "lua",
+      "luadoc",
       "vim",
-      -- add more arguments for adding more treesitter parsers
+
+      "go",
+      "python",
+      "bash",
+      "html",
+      "make",
+      "typescript",
+      "toml",
+      "csv",
+      "dockerfile",
+      "css",
+      "yaml",
+
+      "diff",
+      "ssh_config",
+      "git_config",
+      "git_rebase",
+      "gitattributes",
+      "gitcommit",
+      "gitignore",
     },
   },
 }
