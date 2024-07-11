@@ -21,6 +21,7 @@ return {
     -- overrides `require("mason-null-ls").setup(...)`
     opts = {
       ensure_installed = {
+        -- "commitlint", broken install
         "markdownlint",
         "stylua",
       },
